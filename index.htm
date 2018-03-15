@@ -9,8 +9,37 @@ font-family: 'Mina', sans-serif;
 </style>
     <script>
         function rungame() {
-            let choices = ['Rock', 'Paper, 'Scissors', 'Scissors', 'Rock' , 'Paper', 'Paper', 'Rock', 'Rock', 'Paper', 'Scissors'];
+            let choices = ['Rock', 'Paper', 'Scissors', 'Scissors', 'Rock' , 'Paper', 'Paper', 'Rock', 'Rock', 'Paper', 'Scissors'];
             let result = choices[Math.floor(Math.random() * 10)];
+            let e = document.getElementById("choice");
+let choice = e.options[e.selectedIndex].value;
+          if (result == "Rock") {
+              if (choice == "p") {
+              alert("WIN");
+              } elseif (choice == "r") {
+                  alert("DRAW");
+              } else {
+                  alert("LOOSE");
+              }
+              }
+            if (result == "Paper") {
+              if (choice == "p") {
+              alert("Draw");
+              } elseif (choice == "r") {
+                  alert("LOOSE");
+              } else {
+                  alert("WIN");
+              }
+              }
+            if (result == "Scissors") {
+              if (choice == "p") {
+              alert("LOOSE");
+              } elseif (choice == "r") {
+                  alert("WIN");
+              } else {
+                  alert("DRAW");
+              }
+              }
             alert(result);
         }
     </script>
