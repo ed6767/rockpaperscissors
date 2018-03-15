@@ -7,6 +7,13 @@ body{
 font-family: 'Mina', sans-serif;
 }
 </style>
+    <script>
+        function rungame() {
+            let choices = ['Rock', 'Paper, 'Scissors', 'Scissors', 'Rock' , 'Paper', 'Paper', 'Rock', 'Rock', 'Paper', 'Scissors'];
+            let result = choices[Math.floor(Math.random() * 10)];
+            alert(result);
+        }
+    </script>
 </head>
 <body>
 <center>
@@ -15,13 +22,19 @@ font-family: 'Mina', sans-serif;
 <br><br>
 <font size=5>Choose!</font>
 <br>
-<select name="choice" id="choice">
-    ROCK
-    PAPER
-    SCISSORS
+
+ <select id="choice">
+  <option value="r">Rock</option>
+  <option value="p">Paper</option>
+  <option value="s">Scissors</option>
+  <option value="icri">Cry</option>
 </select>
+
 <br>
-<button onclick="gamerun();" value="PLAY" />
+    <a href="#run" onclick="rungame();">Run game</a>
+    <br><br>
+    <div id="result">
+    </div>
 </center>
 </body>
 </html>
